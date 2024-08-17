@@ -5,7 +5,7 @@ local options = {
     debug = true,
 }
 
-local INSTALLER_ID = '3naSaR8X'
+local INSTALLER_LINK = 'https://raw.githubusercontent.com/iGameCreep/cc-t-scripts/master/induction_matrix/receiver.lua'
 local energy_suffixes = { 'k', 'M', 'G', 'T', 'P' }
 local time_periods = {
     { 'weeks', 604800 },
@@ -150,10 +150,10 @@ file_write('config', textutils.serialize(options))
 if 'install' == args[1] then
     print('Installing Matrix Monitor (Receiver Module)...')
     local has_existing_install = fs.exists('startup.lua')
-    if fs.exists('startup.lua') then
+    if has_existing_install then
         fs.delete('startup.lua')
     end
-    shell.run('pastebin', 'get', INSTALLER_ID, 'startup.lua')
+    shell.run('wget', INSTALLER_LINK, 'startup.lua')
     if not has_existing_install then
         print('Opening config file for editing...')
         sleep(2.5)
