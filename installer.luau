@@ -1,5 +1,5 @@
 local base = "https://raw.githubusercontent.com/iGameCreep/cc-t-scripts/master/"
-local folder = "build"
+local folder = "build/"
 local files = {
 	"script.lua",
 }

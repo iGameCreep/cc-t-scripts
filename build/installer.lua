@@ -1,5 +1,5 @@
 local base="https://raw.githubusercontent.com/iGameCreep/cc-t-scripts/master/"
-local folder="build"
+local folder="build/"
 local files={
 "script.lua",
 }do local _DALBIT_REMOVE_GENERALIZED_ITERATION_iterfa2977eb7154da9c, _DALBIT_REMOVE_GENERALIZED_ITERATION_invarfa2977eb7154da9c, _DALBIT_REMOVE_GENERALIZED_ITERATION_controlfa2977eb7154da9c=
