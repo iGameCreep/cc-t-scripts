@@ -154,6 +154,39 @@ export type MonitorAPI = {
     getPaletteColor: (colour: number) -> number,
 }
 
+export type ColorsAPI = {
+    -- Color constants
+    white: number,
+    orange: number,
+    magenta: number,
+    lightBlue: number,
+    yellow: number,
+    lime: number,
+    pink: number,
+    gray: number,
+    lightGray: number,
+    cyan: number,
+    purple: number,
+    blue: number,
+    brown: number,
+    green: number,
+    red: number,
+    black: number,
+
+    -- Color set operations
+    combine: (...number) -> number,
+    subtract: (colors: number, ...number) -> number,
+    test: (colors: number, color: number) -> boolean,
+
+    -- RGB utilities
+    packRGB: (r: number, g: number, b: number) -> number,
+    unpackRGB: (rgb: number) -> (number, number, number),
+
+    -- Blit conversions
+    toBlit: (color: number) -> string,
+    fromBlit: (hex: string) -> number,
+}
+
 -- ## GLOBALS
 declare os: OSAPI
 declare fs: FSAPI
@@ -162,6 +195,7 @@ declare peripheral: PeripheralAPI
 declare redstone: RedstoneAPI
 declare http: HTTPAPI
 declare turtle: TurtleAPI
+declare colors: ColorsAPI
 
 -- ## Other globals
 declare sleep: (seconds: number) -> ()
