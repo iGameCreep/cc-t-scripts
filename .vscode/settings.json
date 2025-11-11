@@ -1,0 +1,6 @@
+{
+    "luau-lsp.platform.type": "standard",
+    "luau-lsp.types.definitionFiles": {
+        "@custom": "types/computercraft.d.luau"
+    }
+}

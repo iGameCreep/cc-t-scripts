@@ -1,0 +1,7 @@
+input = "src"
+output = "build"
+file_extension = "lua"
+target_version = "lua53"
+minify = true
+
+[modifiers]
