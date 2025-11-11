@@ -111,6 +111,49 @@ export type TurtleAPI = {
     refuel: (count: number | nil) -> boolean,
 }
 
+-- ## PERIPHERALS
+export type MonitorAPI = {
+    -- Cursor & text scale
+    setTextScale: (scale: number) -> (),
+    getTextScale: () -> number,
+    getCursorPos: () -> (number, number),
+    setCursorPos: (x: number, y: number) -> (),
+    getCursorBlink: () -> boolean,
+    setCursorBlink: (blink: boolean) -> (),
+
+    -- Writing & scrolling
+    write: (text: string) -> (),
+    scroll: (y: number) -> (),
+    blit: (text: string, textColour: string, backgroundColour: string) -> (),
+
+    -- Size & clearing
+    getSize: () -> (number, number),
+    clear: () -> (),
+    clearLine: () -> (),
+
+    -- Text colours
+    getTextColour: () -> number,
+    getTextColor: () -> number,
+    setTextColour: (colour: number) -> (),
+    setTextColor: (colour: number) -> (),
+
+    -- Background colours
+    getBackgroundColour: () -> number,
+    getBackgroundColor: () -> number,
+    setBackgroundColour: (colour: number) -> (),
+    setBackgroundColor: (colour: number) -> (),
+
+    -- Colour support
+    isColour: () -> boolean,
+    isColor: () -> boolean,
+
+    -- Palette
+    setPaletteColour: (...any) -> (),  -- Accepts variable arguments depending on usage
+    setPaletteColor: (...any) -> (),
+    getPaletteColour: (colour: number) -> number,
+    getPaletteColor: (colour: number) -> number,
+}
+
 -- ## GLOBALS
 declare os: OSAPI
 declare fs: FSAPI
